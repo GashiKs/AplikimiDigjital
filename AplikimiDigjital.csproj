@@ -11,8 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Entities\" />
     <Folder Include="Context\" />
     <Folder Include="Services\" />
     <Folder Include="Repositories\" />
