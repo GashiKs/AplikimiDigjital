@@ -4,11 +4,11 @@ using AplikimiDigjital.Models;
 
 namespace AplikimiDigjital.Validators
 {
-    public class UserValidator: AbstractValidator<User>;
+    public class UserValidator: AbstractValidator<User>
     {
         public UserValidator()
         {
-            RuleFor(x => x.ID).NotEmpty();
+            //RuleFor(x => x.ID).NotEmpty();
 
             RuleFor(x => x.Name).NotEmpty().WithMessage("Fill the Name Field!");
             RuleFor(x => x.Name).NotEmpty().MinimumLength(2).WithMessage("Name should have 2 characters at least!");
