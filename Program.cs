@@ -1,4 +1,9 @@
 using AplikimiDigjital.Context;
+using AplikimiDigjital.Mappings;
+using AplikimiDigjital.Repositories;
+using AplikimiDigjital.Repositories.Interfaces;
+using AplikimiDigjital.Services;
+using AplikimiDigjital.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,8 +18,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(typeof(UserProfileMap));
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 var app = builder.Build();
 
+app.UseCors();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
