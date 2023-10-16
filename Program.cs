@@ -21,6 +21,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(UserProfileMap));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAplikimiRepository, AplikimiRepository>();
+builder.Services.AddScoped<IAplikimiService, AplikimiService>();
 
 var app = builder.Build();
 
