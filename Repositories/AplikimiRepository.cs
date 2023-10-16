@@ -35,6 +35,11 @@ namespace AplikimiDigjital.Repositories
             return _dbContext.Aplikimet.Find(id);
         }
 
+        public AplikimiEntity GetAplikimiByName(string name)
+        {
+            var aplikimi = _dbContext.Aplikimet.FirstOrDefault(x => x.Name == name);
+            return aplikimi;
+        }
         public void UpdateAplikimi(AplikimiEntity aplikimi)
         {
             var oldAplikimi = _dbContext.Aplikimet.Find(aplikimi.ID);

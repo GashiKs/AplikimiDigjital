@@ -9,5 +9,6 @@ namespace AplikimiDigjital.Services.Interfaces
         public void DeleteAplikim(int id);
         public Aplikimi GetAplikimiById(int id);
         public List<Aplikimi> GetAllAplikim();
+        public Aplikimi GetAplikimiByName(string name);
     }
 }

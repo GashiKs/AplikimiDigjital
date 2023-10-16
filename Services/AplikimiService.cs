@@ -46,6 +46,13 @@ namespace AplikimiDigjital.Services
             return aplikimi;
         }
 
+        public Aplikimi GetAplikimiByName(string name)
+        {
+            var aplikimiEntity = _aplikimiRepository.GetAplikimiByName(name);
+            var aplikimi = _mapper.Map<Aplikimi>(aplikimiEntity);
+            return aplikimi;
+        }
+
         public void UpdateAplikimi(Aplikimi aplikimi)
         {
             try

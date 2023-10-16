@@ -29,6 +29,12 @@ namespace AplikimiDigjital.Controllers
             var aplikimi = _aplikimiService.GetAplikimiById(id);
             return aplikimi;
         }
+        [HttpGet("GetAplikimiByName/{name}")]
+        public Aplikimi GetAplikimiByName(string name)
+        {
+            var aplikimi = _aplikimiService.GetAplikimiByName(name);
+            return aplikimi;
+        }
 
         [HttpPost("CreateAplikimi")]
         public IActionResult CreateAplikimi(Aplikimi aplikimi)

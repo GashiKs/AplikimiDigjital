@@ -9,5 +9,6 @@ namespace AplikimiDigjital.Repositories.Interfaces
         public void DeleteAplikimi(int id);
         public AplikimiEntity GetAplikimiById(int id);
         public List<AplikimiEntity> GetAllAplikimet();
+        public AplikimiEntity GetAplikimiByName(string name);
     }
 }

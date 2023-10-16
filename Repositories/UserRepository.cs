@@ -32,7 +32,7 @@ namespace AplikimiDigjital.Repositories
         public void UpdateUser(UserEntity user)
         {
             var oldUser = _dbContext.Users.Find(user.ID);
-            _dbContext.Entry(oldUser).CurrentValues.SetValues(user);
+            _dbContext.Users.Entry(oldUser).CurrentValues.SetValues(user);
             _dbContext.SaveChanges();
         } 
         public void DeleteUser(int id)
